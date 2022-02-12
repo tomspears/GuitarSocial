@@ -8,7 +8,6 @@ export default function Rightbar() {
                     <img src="/assets/gift.png" alt="" className="birthdayImg" />
                     <span className="birthdayText"><b>Marco Piazza</b> and <b>5 other friends</b> have birthdays today</span>
                 </div>
-                <img src="/assets/ad.gif" alt="" className="rightbarAd" />
                 <h4 className="rightbarTitle">Online Friends</h4>
                 <ul className="rightbarFriendList">
                     <li className="rightbarFriend">
@@ -75,6 +74,8 @@ export default function Rightbar() {
                         <span className="rightbarUsername">Jane Fonda</span>
                     </li>
                 </ul>
+                <h4 className="rightbarAdText">Sponsored By:</h4>
+                <img src="/assets/ad.gif" alt="" className="rightbarAd" />
             </div>
         </div>
     );
