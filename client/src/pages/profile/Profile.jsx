@@ -3,8 +3,13 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Rightbar from "../../components/rightbar/Rightbar";
 import Feed from "../../components/feed/Feed";
 import "./profile.css";
+import "../../dummyData"
+
 
 export default function Profile() {
+
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
     return  (
         <>
         <Topbar/>
@@ -13,8 +18,8 @@ export default function Profile() {
             <div className="profileRight">
                 <div className="profileRightTop">
                     <div className="profileCover">
-                        <img src="/assets/post/post4.jpg" alt="" className="profileCoverImg" />
-                        <img src="/assets/person/profile1.jpg" alt="" className="profileUserImg" />
+                        <img src= {PF + "post/post4.jpg"} alt="" className="profileCoverImg" />
+                        <img src={PF + "person/profile1.jpg"} alt="" className="profileUserImg" />
                     </div>
                     <div className="profileInfo">
                         <h4 className="profileInfoName">Tom Spears</h4>

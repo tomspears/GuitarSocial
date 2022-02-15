@@ -1,9 +1,12 @@
 import "./rightbar.css";
 import {Users} from "../../dummyData"
 import Online from "../online/Online";
+import Profile from "../../pages/profile/Profile";
 
 
-export default function Rightbar({profile}) {
+export default function Rightbar({Profile}) {
+
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
     const HomeRightbar = () =>{
         return(
@@ -47,38 +50,38 @@ export default function Rightbar({profile}) {
             <h4 className="rightbarTitle">My Friends</h4>
             <div className="rightbarFollowings">
                 <div className="rightbarFollowing">
-                    <img src="/assets/person/profile2.jpg" alt="" className="rightbarFollowingImg" />
+                    <img src={PF + "person/profile1.jpg"} alt="" className="rightbarFollowingImg" />
                     <span className="rightbarFollowingName">John Smith</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img src="/assets/person/profile3.jpg" alt="" className="rightbarFollowingImg" />
+                    <img src={PF + "person/profile3.jpg"} alt="" className="rightbarFollowingImg" />
                     <span className="rightbarFollowingName">John Smith</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img src="/assets/person/profile4.jpg" alt="" className="rightbarFollowingImg" />
+                    <img src={PF + "person/profile4.jpg" } alt="" className="rightbarFollowingImg" />
                     <span className="rightbarFollowingName">John Smith</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img src="/assets/person/profile5.jpg" alt="" className="rightbarFollowingImg" />
+                    <img src={PF + "person/profile5.jpg"} alt="" className="rightbarFollowingImg" />
                     <span className="rightbarFollowingName">John Smith</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img src="/assets/person/profile6.jpg" alt="" className="rightbarFollowingImg" />
+                    <img src={PF + "person/profile6.jpg"} alt="" className="rightbarFollowingImg" />
                     <span className="rightbarFollowingName">John Smith</span>
                 </div>
                 <div className="rightbarFollowing">
-                    <img src="/assets/person/profile7.jpg" alt="" className="rightbarFollowingImg" />
+                    <img src={PF + "person/profile7.jpg"} alt="" className="rightbarFollowingImg" />
                     <span className="rightbarFollowingName">John Smith</span>
                 </div>
             </div>
             </>
         )
-    }
+    };
 
     return (
         <div className="rightbar">
             <div className="rightBarWrapper">
-                {profile ? <ProfileRightbar/> : <HomeRightbar/>}
+                { Profile ? <ProfileRightbar /> : <HomeRightbar /> }
             </div>
         </div>
     );
