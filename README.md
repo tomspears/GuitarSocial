@@ -1,4 +1,4 @@
-# GuitarSocial Protoype work in progress - 
+# GuitarSocial Protoype work in progress - for current API documentation see https://documenter.getpostman.com/view/19200987/UVsEXA3z
 #
 # Guitar Education Social App
 #
