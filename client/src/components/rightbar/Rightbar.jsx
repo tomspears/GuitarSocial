@@ -1,7 +1,6 @@
 import "./rightbar.css";
 import {Users} from "../../dummyData"
 import Online from "../online/Online";
-import Profile from "../../pages/profile/Profile";
 
 
 export default function Rightbar({Profile}) {
@@ -13,7 +12,7 @@ export default function Rightbar({Profile}) {
             <>
             <div className="birthdayContainer">
                     <img src="/assets/gift.png" alt="" className="birthdayImg" />
-                    <span className="birthdayText"><b>Marco Piazza</b> and <b>5 other friends</b> have birthdays today</span>
+                    <span className="birthdayText"><b>Marco Piazza</b> and <b>5 other friends</b> have birthdays today... Say Hi!</span>
                 </div>
                 <h4 className="rightbarTitle">Online Friends</h4>
                 <ul className="rightbarFriendList">
@@ -21,6 +20,7 @@ export default function Rightbar({Profile}) {
                         <Online key={u.id} user={u} />
                     ))}
                 </ul>
+                <hr></hr>
                 <h4 className="rightbarAdText">Sponsored By:</h4>
                 <img src="/assets/ad.gif" alt="" className="rightbarAd" />
             </>

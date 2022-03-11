@@ -8,8 +8,12 @@
 }
 
 .birthdayContainer{
+    padding: 10px;
     display: flex;
     align-items: center;
+    box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.43);
+    margin: 20px 0;
+    border-radius: 10px;
 }
 
 .birthdayImg{
@@ -19,8 +23,8 @@
 }
 
 .birthdayText{
-    margin-top: 15px;
-    font-size: 15px;
+    margin: 15px;
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -34,6 +38,7 @@
 }
 
 .rightbarTitle{
+    padding-top: 20px;
     margin-top: 20px;
     font-size: 18px;
     font-weight: 500;
@@ -82,4 +87,5 @@
     object-fit: cover;
     border-radius: 5%;
     cursor: pointer;
+    margin-right: 40px;
 }
