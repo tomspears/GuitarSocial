@@ -58,6 +58,7 @@
 .postBottomLeft{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .likeIcon{
@@ -69,6 +70,7 @@
 
 .postLikeCounter{
     font-size: 15px;
+    margin-right: 10px;
 }
 
 .postCommentText{

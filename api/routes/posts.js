@@ -60,6 +60,22 @@ router.put("/:id/like", async (req, res) => {
     }
 });
 
+//toggle post "shred" - shred or unshred a post
+router.put("/:id/shred", async (req, res) => {
+    try {
+         const post = await Post.findById(req.params.id);
+        if (!post.shreds.includes(req.body.userId)) {
+            await post.updateOne({ $push: { shreds: req.body.userId } });
+            res.status(200).json("The post has been shreded");
+        }else {
+            await post.updateOne({ $pull: { shreds: req.body.userId } });
+            res.status(200).json("The post has been unshreded");
+        }
+    }catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 //get a post
 router.get("/:id", async (req, res)=>{
     try{
